@@ -51,6 +51,9 @@
   }
   /* Hero section styles */
   .heroContainer{
+    background-image: url("/images/hero-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     width: 1024px;
     justify-content: space-between;
@@ -68,7 +71,7 @@
 
   }
   .heroImage{
-    height: 650px;
+    height: 300px;
   }
   .bookNowBtnContainer{
     display: flex;
