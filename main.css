@@ -1,0 +1,144 @@
+@import "mobile.css";
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family:"Montserrat", sans-serif;
+  }
+  
+  /* navigation styles */
+  nav{
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   
+  }
+  .navChild{
+    display: flex;
+    width: 1024px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navLinks{
+    display: flex;
+    gap: 40px;
+  }
+
+
+  a{
+    text-decoration: none;
+    color: black;
+    padding: 2rem 0rem 2rem 0rem;
+  }
+   
+  .locationIcon{
+    display: flex;
+  }
+  /* body main container */
+  
+  .mainContainer{
+    display: flex;
+    justify-content: center;
+
+  }
+  .mainContainerContent{
+    width: 1024px;
+  
+  }
+  /* Hero section styles */
+  .heroContainer{
+    display: flex;
+    width: 1024px;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .heroTextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: lighter;
+
+
+  }
+  .heroImage{
+    height: 650px;
+  }
+  .bookNowBtnContainer{
+    display: flex;
+    justify-content: center;
+   
+  }
+  .bookNowBtn{
+    font-size:large;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+
+    /* portfolio container styles */
+    .aboutMeContainer{
+      display: flex;
+      width: 1024px;
+      gap: 3rem;
+      /* background-color: yellow; */
+      
+    }
+    .aboutmeImageContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 512px;
+      height: 512px;
+      /* background-color: coral; */
+    }
+    .nlvLogo{
+      height: 300px;
+      filter: invert(100%)
+    }
+    .aboutMeSummaryContainer{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 512px;
+      height: 512px;
+      justify-content: center;
+      /* background-color:darkgreen */
+    }
+
+     /* map and Contact form container styles */
+     .mapAndContactFormContainer{
+      display: flex;
+      width: 1024px;
+      gap: 3rem;
+      background-color: green;
+     }
+     .mapContainer{
+      width: 512px;
+      height: 512px;
+      background-color: purple;
+     }
+     .contactFormContainer{
+      width: 512px;
+      height: 512px;
+      background-color: burlywood
+
+     }
+
+
+    
+
+
+   
+
+
+ 
