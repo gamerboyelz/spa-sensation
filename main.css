@@ -108,10 +108,64 @@ nav{
   padding-right: 8rem;
 }
 .aboutMe{
-  padding: 4rem;
+  padding: 2rem;
+}
+.address{
+  display: flex;
+  justify-content: center;
+}
+.services{
+  padding: 2rem;
 }
 h3{
   text-align: center;
   padding: 1rem;
 }
+
+
+
+/* contact form */
+.contactFormContainer {
+  /* width: 512px;
+  height: 512px; */
+  /* background-color: burlywood; */
+}
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+label{
+  margin-top: 2rem;
+}
+
+#contactForm input,
+textarea,
+select,
+button {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+#contactForm input{
+   border: none;
+   outline: none;
+   border-bottom: 1px solid #212020d1;
+   background-color: rgba(255, 255, 255, 0);
+}
+textarea{
+  border: none;
+  outline: none;
+  /* background-color: rgba(5, 5, 5, 0.181); */
+}
+#submitButton{
+  margin-top: 2rem;
+  padding: 1rem;
+  border: none;
+  background-color: rgba(28, 42, 28, 0.973);
+  color: whitesmoke;
+  border-radius: 5px;
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
 }
