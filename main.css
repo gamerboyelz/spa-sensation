@@ -1,10 +1,32 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  color: #1c2a1c;
+  background-color: #f6f2ea;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 2rem 0;
+}
+
+h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+  letter-spacing: 0.18em;
+}
+
+p {
+  max-width: 70ch;
+  margin: 0 auto;
 }
 
 /* navigation styles */
@@ -12,176 +34,325 @@ header {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: rgba(28, 42, 28, 0.973);
 }
+
 nav {
   display: flex;
-  height: 80px;
+  min-height: 80px;
   justify-content: center;
   align-items: center;
 }
+
 .navChild {
   display: flex;
-  width: 1024px;
+  width: min(1120px, calc(100% - 3rem));
   justify-content: space-between;
   align-items: center;
 }
+
 .navLinks {
   display: flex;
   gap: 40px;
 }
 
-a {
-  text-decoration: none;
-  color: whitesmoke;
-  padding: 2rem 0rem 2rem 0rem;
-}
-
 .locationIcon {
   display: flex;
 }
+
+/* page layout */
+.mainContainer {
+  padding-bottom: 5rem;
+}
+
+.aboutMe,
+.services,
+.address,
+.contactFormContainer {
+  width: min(1120px, calc(100% - 4rem));
+  margin: 0 auto;
+}
+
+.aboutMe,
+.services,
+.contactFormContainer {
+  padding: 4rem;
+  margin-top: 3rem;
+  border-radius: 24px;
+  box-shadow: rgba(17, 24, 39, 0.08) 0px 20px 45px;
+}
+
+.aboutMe,
+.contactFormContainer {
+  background-color: #fffdf8;
+}
+
+.services {
+  background-color: rgba(28, 42, 28, 0.973);
+  color: whitesmoke;
+}
+
 /* Hero section styles */
 .heroContainer {
   display: flex;
-  justify-content: flex-start;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.381), rgba(0, 0, 0, 0.392)), url("images/hero-image.jpg");
+  align-items: center;
+  min-height: 72vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.381), rgba(0, 0, 0, 0.392)),
+    url("images/hero-image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding: 5rem 8rem;
 }
 
 .heroTextContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 3rem;
-  font-weight: lighter;
+  max-width: 620px;
+  font-size: clamp(3.25rem, 6vw, 5.5rem);
+  font-weight: 300;
 }
+
 .heroTextContainer div h1 {
   color: whitesmoke;
+  line-height: 0.95;
   text-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .bookNowBtnContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
+
 .bookNowBtn {
-  font-size: large;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding: 20px;
+  padding: 1rem 1.75rem;
   border-radius: 5px;
   border: none;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  /* color: whitesmoke; */
   background-color: rgba(255, 255, 255, 0.973);
+  cursor: pointer;
 }
 
-
-
-/* mobile styles */
-@media (max-width: 800px) {
-  html,body {
-  font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
-}
-nav{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.navLinks {
-
-  gap: 30px;
-}
-.locationIcon{
-  padding-left: 30px;
-}
-.mainContainer{
-    flex-direction: column;
-  }
-  .heroContainer {
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.381), rgba(0, 0, 0, 0.392)), url("images/hero-image.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-.heroTextContainer {
- 
-  font-size: 2.5rem;
-  font-weight: lighter;
-  padding: 1rem;
-}
-.aboutMe{
-  padding: 2rem;
-}
-.address{
-  display: flex;
-  justify-content: center;
-}
-.services{
-  padding: 2rem;
-  background-color: rgba(28, 42, 28, 0.973);
-  color: whitesmoke;
-
-}
-h3{
-  text-align: center;
-  padding: 1rem;
+/* map and contact form */
+.address {
+  margin-top: 3rem;
 }
 
-
-
-/* contact form */
-.contactFormContainer {
-  /* width: 512px;
-  height: 512px; */
-  /* background-color: burlywood; */
+.mapContainer iframe {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+  border-radius: 24px;
+  box-shadow: rgba(17, 24, 39, 0.08) 0px 20px 45px;
 }
+
 #contactForm {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
+  display: grid;
+  gap: 0.75rem;
 }
-label{
-  margin-top: 2rem;
+
+label {
+  margin-top: 1rem;
+  font-weight: 600;
 }
 
 #contactForm input,
 textarea,
 select,
 button {
+  width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+  font: inherit;
 }
-#contactForm input{
-   border: none;
-   outline: none;
-   border-bottom: 1px solid #212020d1;
-   background-color: rgba(255, 255, 255, 0);
-}
-textarea{
+
+#contactForm input,
+textarea {
   border: none;
   outline: none;
-  /* background-color: rgba(5, 5, 5, 0.181); */
+  border-bottom: 1px solid #212020d1;
+  background-color: rgba(255, 255, 255, 0);
 }
-#submitButton{
-  margin-top: 2rem;
-  padding: 1rem;
+
+textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+#submitButton {
+  margin-top: 1.5rem;
   border: none;
   background-color: rgba(28, 42, 28, 0.973);
   color: whitesmoke;
   border-radius: 5px;
-   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
+/* mobile styles */
+@media (max-width: 800px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    line-height: 1.7;
+  }
+
+  h3 {
+    padding-bottom: 0.75rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
+  }
+
+  p {
+    max-width: none;
+    font-size: 0.98rem;
+  }
+
+  nav {
+    min-height: auto;
+    padding: 0.9rem 1rem 1.1rem;
+  }
+
+  .navChild {
+    flex-direction: row;
+    width: 100%;
+    gap: 0.75rem;
+    justify-content: space-between;
+  }
+
+  .navLinks {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.9rem;
+    flex-wrap: nowrap;
+  }
+
+  .navLinks a,
+  .locationIcon a {
+    display: block;
+    text-align: center;
+    padding: 0.35rem 0;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+  }
+
+  .locationIcon {
+    padding-left: 0;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .aboutMe,
+  .services,
+  .address,
+  .contactFormContainer {
+    width: min(100%, calc(100% - 1.5rem));
+  }
+
+  .services {
+    width: 100%;
+  }
+
+  .services p {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .address {
+    width: 100%;
+  }
+
+  .aboutMe,
+  .services,
+  .contactFormContainer {
+    padding: 1.5rem 0.25rem;
+    margin-top: 1.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .services {
+    background-color: rgba(28, 42, 28, 0.973);
+    color: whitesmoke;
+  }
+
+  .heroContainer {
+    justify-content: center;
+    min-height: 60vh;
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  .heroTextContainer {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+    padding: 0;
+    text-align: center;
+  }
+
+  .heroTextContainer div h1 {
+    line-height: 1;
+  }
+
+  .bookNowBtnContainer {
+    justify-content: center;
+  }
+
+  .bookNowBtn {
+    font-size: 0.82rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.1rem;
+  }
+
+  .address {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .mapContainer {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .mapContainer iframe {
+    min-height: 280px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #contactForm {
+    gap: 0.4rem;
+  }
+
+  label {
+    margin-top: 0.85rem;
+    font-size: 0.92rem;
+  }
+
+  #contactForm input,
+  textarea,
+  select,
+  button {
+    padding: 0.85rem 0.35rem;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  #submitButton {
+    margin-top: 1rem;
+  }
 }
